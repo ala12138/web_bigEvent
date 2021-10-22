@@ -35,6 +35,7 @@ function getUserInfo() {
             // $('.text-avatar').html(username.charAt(0).toUpperCase());
             // $('.layui-nav-img').css('display','none')
 
+            console.log(res);
             
             renderAvatar(res.data);
         },
@@ -59,7 +60,7 @@ function renderAvatar(user) {
     $('#welcome').html('欢迎您&nbsp;' + name);
     //如果用户有自己的头像 就切换到自己的头像，没有就换成系统的
     if (user.user_pic) {
-        $('.layui-nav-img').attr('src', user_pic);
+        $('.layui-nav-img').attr('src', user.user_pic);
         $('.text-avatar').hide();
     } else {
         $('.layui-nav-img').hide();

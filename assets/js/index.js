@@ -35,7 +35,7 @@ function getUserInfo() {
             // $('.text-avatar').html(username.charAt(0).toUpperCase());
             // $('.layui-nav-img').css('display','none')
 
-            console.log(res);
+            // console.log(res);
             
             renderAvatar(res.data);
         },
